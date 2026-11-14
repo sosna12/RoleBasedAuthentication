@@ -23,7 +23,7 @@ import "./App.css";
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.BASE_URL}>
         <Routes>
           {/* Public pages */}
           <Route path="/" element={<Navigate to="/login" replace />} />
