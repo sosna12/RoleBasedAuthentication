@@ -11,7 +11,13 @@ dotenv.config();
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({
+  origin: [
+    "http://localhost:5173",
+    "https://role-basedauthentication.vercel.app",
+    "https://sosna12.github.io"
+  ]
+}));
 app.use(express.json());
 
 // Main test route
