@@ -39,6 +39,8 @@ jobs:
 
       - name: Build React application
         working-directory: frontend
+        env:
+          VITE_BASE_PATH: /RoleBasedAuthentication/
         run: npm run build
 
       - name: Setup GitHub Pages
